@@ -1,0 +1,13 @@
+# System Files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+.AppleDB
+.AppleDesktop
+
+# Compiled Files
+scripts.js
+styles.css
