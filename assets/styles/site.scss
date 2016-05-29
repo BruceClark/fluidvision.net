@@ -1,0 +1,59 @@
+/* Colors */
+
+$navysuit:    #24323b;
+$bodytype:    #fefefe;
+$subtletype:  #748893;
+$darktype:    #284859;
+
+body {
+  background: $navysuit;
+  color: $bodytype;
+}
+
+#intro {
+  background: url(/images/backgrounds/hero.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  border-bottom: 5px solid darken(#24323b,5%);
+  padding: 90px 0 75px 0;
+
+  img.rounded {
+    border-radius: 140px;
+    width: 280px;
+    height: 280px;
+  }
+
+  .name {
+    color: $darktype;
+
+    h1 {
+      padding-top: 50px;
+      font-size: 400%;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+}//#intro
+
+#approach {
+  padding: 50px 0;
+
+  .rundown {
+    color: $subtletype;
+    text-align: right;
+    font-size: 180%;
+    font-weight: 200;
+    line-height: 1.3;
+
+    span {
+      display: block;
+      padding-top: 30px;
+      color: #fff;
+    }
+  }
+
+  .call {
+    h2 {
+      font-size: 320%;
+    }
+  }//.call
+}//#approach

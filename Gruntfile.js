@@ -5,15 +5,10 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('package.json'),
     bower: 'bower_components',
 
-    less: {
+    sass: {
       development: {
-        options: {
-          compress: false,
-          yuicompress: true,
-          optimization: 2
-        },
         files: {
-          'styles.css': 'assets/styles/manifest.less'
+          'styles.css': 'assets/styles/manifest.scss'
         }
       }
     },
@@ -23,7 +18,7 @@ module.exports = function (grunt) {
         separator: ';'
       },
       dist: {
-        src: 'assets/scripts/*.js',
+        src: ['node_modules/foundation-sites/dist/foundation.min.js','assets/scripts/*.js'],
         dest: 'scripts.js'
       }
     },
@@ -35,8 +30,8 @@ module.exports = function (grunt) {
       },
 
       styles: {
-        files: 'assets/styles/*.less',
-        tasks: 'less'
+        files: 'assets/styles/*.scss',
+        tasks: 'sass'
       },
 
       js: {
