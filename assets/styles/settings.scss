@@ -1,17 +1,11 @@
-/* Foundation Setings Overrides */
+/* Foundation Setings Overrides
+---------------------------------------- */
 
-$body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
-
-
-/* Typography */
-
-@mixin serif { font-family: "Georgia", serif; }
-@mixin heading { font-family: "bebas-neue", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif; }
-
-.wf-loading { visibility: hidden; } // Fix FOUT w/ Typekit
+$body-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 
-/* Custom Colors */
+/* Custom Colors
+---------------------------------------- */
 
 $navysuit:    #24323b;
 $bodytype:    #c8cdd0;
@@ -19,3 +13,13 @@ $subtlegray:  #748893;
 $darktype:    #284859;
 $highlight:   #ededed;
 $darkgray:    #555;
+
+
+/* Typography
+---------------------------------------- */
+
+@mixin serif { font-family: "Georgia", serif; }
+@mixin heading { font-family: "bebas-neue", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif; }
+@mixin highlight { text-transform: uppercase; color: $highlight; }
+
+.wf-loading { visibility: hidden; } // Fix FOUT w/ Typekit

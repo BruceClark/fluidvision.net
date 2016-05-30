@@ -18,7 +18,7 @@ module.exports = function (grunt) {
         separator: ';'
       },
       dist: {
-        src: ['node_modules/foundation-sites/dist/foundation.min.js','assets/scripts/*.js'],
+        src: ['assets/scripts/*.js'],
         dest: 'scripts.js'
       }
     },

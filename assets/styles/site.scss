@@ -1,11 +1,14 @@
-/* Base Styling */
+/* Base Styling
+---------------------------------------- */
 
 body {
   background: $navysuit;
   color: $bodytype;
 }
 
-/* Section Styles */
+
+/* Section Styles
+---------------------------------------- */
 
 #intro {
   background: #26333c url(/images/backgrounds/hero.jpg) no-repeat 50% 50%;
@@ -13,15 +16,18 @@ body {
   border-bottom: 5px solid darken(#24323b,5%);
   padding: 90px 0 75px 0;
 
-  img.rounded {
-    border-radius: 140px;
-    width: 260px;
-    height: 260px;
-    border: 2px solid #fff;
-    box-shadow: 5px 5px 0 rgba(0,0,0,.25);
-  }
+  .photo {
+    img.rounded {
+      border-radius: 140px;
+      width: 260px;
+      height: 260px;
+      border: 2px solid #fff;
+      box-shadow: 5px 5px 0 rgba(0,0,0,.25);
+    }//img.rounded
+  }//.photo
 
   .name {
+    float: right;
     color: $darktype;
 
     h4 {
@@ -30,19 +36,34 @@ body {
       color: $darkgray;
       font-style: italic;
       @include serif;
-    }
+    }//h4
 
     h1 {
       line-height: 1;
       font-size: 560%;
       text-transform: uppercase;
       @include heading;
-    }
+    }//h1
   }//.name
 }//#intro
 
+@media #{$small-only} {
+  #intro {
+    background: #26333c url(/images/backgrounds/hero.jpg) no-repeat 50% 100%;
+    text-align: center;
+    padding: 50px 0 55px 0;
+
+    .name {
+      h1 {
+        font-size: 500%;
+        padding-bottom: 22px;
+      }
+    }//.name
+  }//#intro
+}//@media small
+
 #approach {
-  padding: 50px 0;
+  padding: 50px 0 8px 0;
 
   .action {
     padding-left: 35px;
@@ -60,7 +81,7 @@ body {
       display: block;
       padding-top: 20px;
       color: #fff;
-    }
+    }//span
   }//.rundown
 
   .call {
@@ -80,8 +101,7 @@ body {
       span {
         font-family: $body-font-family;
         font-size: 80%;
-        text-transform: uppercase;
-        color: $highlight;
+        @include highlight;
       }
 
       em {
@@ -95,6 +115,32 @@ body {
     p {
       font-size: 130%;
       line-height: 1.5;
-    }
+    }//p
   }//.call
 }//#approach
+
+#work {
+  padding-bottom: 50px;
+
+  .portfolio-wrap {
+    border-top: 1px solid $subtlegray;
+    padding-top: 34px;
+
+    span {
+      @include highlight;
+    }
+  }//.portfolio-wrap
+
+  .portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 12px;
+
+    .piece {
+      width: 33.3%;
+      height: 120px;
+      padding: 15px;
+      background: #009;
+    }
+  }//.portfolio
+}//#work
