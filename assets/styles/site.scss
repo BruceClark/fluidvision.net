@@ -27,23 +27,36 @@ body {
   }//.photo
 
   .name {
+    padding-top: 8px;
     float: right;
     color: $darktype;
 
     h4 {
-      margin-top: -8px;
-      font-size: 22px;
+      font-size: 160%;
       color: $darkgray;
       font-style: italic;
       @include serif;
     }//h4
 
     h1 {
+      padding-bottom: 10px;
+      margin-left: -3px;
       line-height: 1;
-      font-size: 560%;
+      font-size: 600%;
       text-transform: uppercase;
       @include heading;
     }//h1
+
+    .hollow.button {
+      background-color: rgba(255,255,255,.15);
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: #fff;
+        border-color: #fff;
+      }
+    }
   }//.name
 }//#intro
 
@@ -120,27 +133,57 @@ body {
 }//#approach
 
 #work {
-  padding-bottom: 50px;
-
   .portfolio-wrap {
     border-top: 1px solid $subtlegray;
-    padding-top: 34px;
+    padding-top: 28px;
 
     span {
       @include highlight;
+
+      em {
+        @include serif;
+        text-transform: lowercase;
+        padding: 0 3px 0 2px;
+      }
     }
   }//.portfolio-wrap
 
   .portfolio {
-    display: flex;
-    flex-wrap: wrap;
     margin-top: 12px;
 
     .piece {
-      width: 33.3%;
-      height: 120px;
-      padding: 15px;
-      background: #009;
-    }
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        display: block;
+        background: lighten($navysuit,5%);
+        padding: 20px 28px 10px 28px;
+        transition: background .5s;
+
+        &:hover {
+          background: lighten($navysuit,10%);
+        }
+
+        strong {
+          color: $white;
+        }
+
+        ul {
+          padding-top: 6px;
+        }
+      }
+    }//.piece
   }//.portfolio
 }//#work
+
+#copyright {
+  padding-bottom: 40px;
+
+  p {
+    color: lighten($navysuit,20%);
+  }
+}

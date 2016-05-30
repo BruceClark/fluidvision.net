@@ -3,6 +3,19 @@
 
 $body-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
+$foundation-palette: (
+  primary:    #638bb0,
+  secondary:  #fff,
+  success:    #3adb76,
+  warning:    #ffae00,
+  alert:      #ec5840
+);
+
+$anchor-color: #8fb5d8;
+$anchor-color-hover: #b7d4ef;
+
+$button-padding: 0.65em .92em;
+
 
 /* Custom Colors
 ---------------------------------------- */

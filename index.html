@@ -18,25 +18,63 @@
   <!-- Scripts -->
   <script src="https://use.typekit.net/sle5fyn.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+  <!--
+        Hello Code Looker!
+
+        Thanks for stopping by, this site is hand made on top of
+        Foundation v6 using: static HTML, Sass, and Grunt.
+
+        You're welcome to view and critique my style files:
+
+          /assets/styles/settings.scss
+          /assets/styles/manifest.scss
+          /assets/styles/site.scss
+
+        Head over to my Github (github.com/bruceclark) if
+        you'd like to see more of my code.
+
+        Fun fact: I made my first website in 8th grade (1999)
+        hand coded with terrible quality HTML and hosted on
+        Angelfire free web hosting. :-)
+  -->
 </head>
 <body class="home">
 
-<div id="intro">
+<section id="intro">
   <div class="row">
 
     <div class="large-7 small-12 column name">
       <h4>Hi there, my name is</h4>
       <h1>Bruce Clark</h1>
-    </div>
+
+      <nav class="links">
+        <a class="secondary hollow button" href="http://twitter.com/bruce">
+          <i class="demo-icon icon-twitter"></i> @bruce
+        </a>
+        <a class="secondary hollow button" href="http://linkedin.com/in/sbruceclark">
+          <i class="icon-linkedin"></i> LinkedIn
+        </a>
+        <a class="secondary hollow button" href="http://github.com/bruceclark">
+          <i class="icon-github-circled"></i> Github
+        </a>
+        <a class="secondary hollow button" href="https://open.spotify.com/user/bruce_clark">
+          <i class="icon-spotify"></i> Spotify
+        </a>
+        <a class="secondary hollow button" href="mailto:bruce@fluidvision.net">
+          <i class="icon-mail"></i> Email
+        </a>
+      </nav><!-- / .links -->
+    </div><!-- / .name -->
 
     <div class="large-offset-2 large-3 small-offset-0 small-12 column photo">
       <img src="/images/bruce.jpg" alt="Bruce Clark" class="rounded"/>
-    </div><!-- / .large-offset .large -->
+    </div><!-- / .photo -->
 
   </div><!-- / .row -->
-</div><!-- / #intro -->
+</section><!-- / #intro -->
 
-<div id="approach">
+<section id="approach">
   <div class="row">
 
     <div class="large-4 large-offset-1 column rundown">
@@ -72,7 +110,7 @@
             <em>HTML</em> (Bootstrap / Foundation)<br/>
             <em>CSS</em> (LESS / Sass)<br/>
             <em>JavaScript</em> (jQuery)<br/>
-            <em>Back-end</em> (PHP / Rails / Wordpress / Umbraco)<br/>
+            <em>Back-end</em> (PHP / Rails / .NET / Wordpress / Umbraco)<br/>
             <em>Processes</em> (Agile Method / Git Workflow)
           </p>
         </div><!-- / .bio -->
@@ -80,31 +118,81 @@
     </div><!-- / .action -->
 
   </div><!-- / .row -->
-</div><!-- / #approach -->
+</section><!-- / #approach -->
 
-<div id="work">
+<section id="work">
   <div class="row">
 
     <div class="large-10 large-offset-1 portfolio-wrap">
-      <span>Hard Skills</span>
+      <span>Examples <em>of</em> Work</span>
 
-      <div class="portfolio">
-        <div class="piece">
+      <div class="expanded row portfolio">
+        <div class="piece large-4 column"><a href="http://www.printfection.com">
           <strong>Printfection</strong>
-        </div><!-- / .piece -->
+          <ul class="no-bullet">
+            <li>Branding &amp; Interface Design</li>
+            <li>Marketing Site &amp; Lead Gen Funnel</li>
+            <li>Bootstrap, LESS, JS, PHP</li>
+          </ul>
+        </a></div><!-- / .piece -->
 
-        <div class="piece">
-          <strong>Printfection</strong>
-        </div><!-- / .piece -->
+        <div class="piece large-4 column"><a href="http://www.coloradoskiandgolf.com">
+          <strong>Colorado Ski &amp; Golf</strong>
+          <ul class="no-bullet">
+            <li>Development Strategy</li>
+            <li>Responsive Build</li>
+            <li>Bootstrap, Sass, JS</li>
+          </ul>
+        </a></div><!-- / .piece -->
 
-        <div class="piece">
-          <strong>Printfection</strong>
-        </div><!-- / .piece -->
+        <div class="piece large-4 column"><a href="http://www.usestacks.com">
+          <strong>Stacks</strong>
+          <ul class="no-bullet">
+            <li>Application Interface Design</li>
+            <li>Marketing Site Build</li>
+            <li>HTML, CSS, JS, .NET</li>
+          </ul>
+        </a></div><!-- / .piece -->
+
+        <div class="piece large-4 column"><a href="http://www.celebrityfantasydraft.com">
+          <strong>Celebrity Fantasy Draft</strong>
+          <ul class="no-bullet">
+            <li>Application Interface Design</li>
+            <li>HTML, CSS, JS, Rails</li>
+            <li>&nbsp;</li>
+          </ul>
+        </a></div><!-- / .piece -->
+
+        <div class="piece large-4 end column"><a href="http://fluidvision.net/writing/grammar.php">
+          <strong>Take Your Grammar Seriously</strong>
+          <ul class="no-bullet">
+            <li>Writing</li>
+            <li>Blog Post</li>
+            <li>&nbsp;</li>
+          </ul>
+        </a></div><!-- / .piece -->
+
+        <div class="piece large-4 column"><a href="http://itunes.apple.com/us/app/denver-ride/id346508530?mt=8">
+          <strong>Denver Ride</strong>
+          <ul class="no-bullet">
+            <li>iOS Interface Design</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+          </ul>
+        </a></div><!-- / .piece -->
       </div><!-- / .portfolio -->
     </div>
 
-  </div>
-</div><!-- / #work -->
+  </div><!-- / .row -->
+</section><!-- / #work -->
+
+<section id="copyright">
+  <div class="row">
+    <div class="large-10 large-offset-1">
+      <p>&copy; Stephen Bruce Clark, Jr.</p>
+    </div>
+  </div><!-- / .row -->
+</section><!-- / #copyright -->
 
 <!-- Scripts -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
