@@ -1,24 +1,11 @@
-/* Typography Overrides */
-@mixin serif {
-  font-family: "Georgia", serif;
-}
-
-@mixin heading {
-  font-family: "bebas-neue", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
-}
-
-/* Colors */
-
-$navysuit:    #24323b;
-$bodytype:    #eee;
-$subtlegray:  #748893;
-$darktype:    #284859;
-$darkgray:    #555;
+/* Base Styling */
 
 body {
   background: $navysuit;
   color: $bodytype;
 }
+
+/* Section Styles */
 
 #intro {
   background: #26333c url(/images/backgrounds/hero.jpg) no-repeat 50% 50%;
@@ -51,7 +38,7 @@ body {
       text-transform: uppercase;
       @include heading;
     }
-  }
+  }//.name
 }//#intro
 
 #approach {
@@ -60,7 +47,7 @@ body {
   .action {
     padding-left: 35px;
     font-size: 90%;
-  }
+  }//.action
 
   .rundown {
     color: $subtlegray;
@@ -68,30 +55,46 @@ body {
     font-size: 180%;
     font-weight: 200;
     line-height: 1.4;
-    padding-top: 8px;
 
     span {
       display: block;
       padding-top: 20px;
       color: #fff;
     }
-  }
+  }//.rundown
 
   .call {
     h2 {
-      font-size: 280%;
-    }
+      font-size: 240%;
 
-    .bio {
-      margin: 20px 75px 0 0;
-      padding-top: 20px;
+      strong {
+        color: $highlight;
+      }
+    }//h2
+
+    .skills {
+      margin: 24px 125px 0 0;
+      padding-top: 24px;
       border-top: 1px solid $subtlegray;
-    }
+
+      span {
+        font-family: $body-font-family;
+        font-size: 80%;
+        text-transform: uppercase;
+        color: $highlight;
+      }
+
+      em {
+        color: $highlight;
+        padding-right: 12px;
+        font-size: 130%;
+        @include serif;
+      }
+    }//.skills
 
     p {
-      font-size: 180%;
-      padding-right: 150px;
-      @include serif;
+      font-size: 130%;
+      line-height: 1.5;
     }
   }//.call
 }//#approach
