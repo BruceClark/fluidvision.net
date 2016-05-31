@@ -1,6 +1,6 @@
 // List of Elements to Work With
 var elements = {
-  $personal_links: $('#intro .links a')
+  $personal_links:  $('#intro .links a')
 }
 
 // Page Updates (Mostly for Responsive)
@@ -15,13 +15,9 @@ var site = {
     // Change button class on #intro
     if (site_width < 640) {
       elements.$personal_links.removeClass('secondary');
-    }
-
-    if (site_width > 640) {
+    } else {
       elements.$personal_links.addClass('secondary');
     }
-
-    console.log(site_width);
   }
 }
 
@@ -29,5 +25,6 @@ $(document).ready(function() {
   $(window).resize(function() {
     site.responsive();
   });
+
   site.boot_up();
 });

@@ -11,7 +11,7 @@ body {
 ---------------------------------------- */
 
 #intro {
-  background: #26333c url(/images/backgrounds/hero.jpg) no-repeat 50% 50%;
+  background: #fefefe url(/images/backgrounds/hero.jpg) no-repeat 50% 50%;
   background-size: cover;
   border-bottom: 5px solid darken(#24323b,5%);
   padding: 90px 0 75px 0;
@@ -47,7 +47,6 @@ body {
       @include heading;
     }//h1
 
-
     .links {
       .hollow.button {
         background-color: rgba(255,255,255,.15);
@@ -58,18 +57,20 @@ body {
           background-color: #fff;
           border-color: #fff;
         }
-      }
-    }
+      }//.hollow.button
+    }//.links
   }//.name
 }//#intro
 
 @media #{$small-only} {
   #intro {
-    background: #26333c url(/images/backgrounds/hero.jpg) no-repeat 50% 100%;
+    background: #fefefe url(/images/backgrounds/hero.jpg) no-repeat 50% 100%;
     text-align: center;
     padding: 35px 0 55px 0;
 
     .name {
+      float: none;
+
       h1 {
         font-size: 500%;
         padding-bottom: 12px;
@@ -85,11 +86,6 @@ body {
 #approach {
   padding: 50px 0 8px 0;
 
-  .action {
-    padding-left: 35px;
-    font-size: 90%;
-  }//.action
-
   .rundown {
     color: $subtlegray;
     text-align: right;
@@ -99,10 +95,14 @@ body {
 
     span {
       display: block;
-      padding-top: 20px;
-      color: #fff;
     }//span
   }//.rundown
+
+  .action {
+    float: right;
+    padding-left: 35px;
+    font-size: 90%;
+  }//.action
 
   .call {
     h2 {
@@ -118,7 +118,7 @@ body {
       padding-top: 24px;
       border-top: 1px solid $subtlegray;
 
-      span {
+      span.title {
         font-family: $body-font-family;
         font-size: 80%;
         @include highlight;
@@ -138,6 +138,70 @@ body {
     }//p
   }//.call
 }//#approach
+
+@media #{$small-only} {
+  #approach {
+    padding: 35px 0 30px 0;
+    overflow: hidden;
+
+    .rundown {
+      margin: 25px 0 0 0;
+      font-size: 130%;
+
+      .marquee {
+        text-align: center;
+      }
+
+      span {
+        padding: 0 12px;
+      }
+    }//.rundown
+
+    .action {
+      float: none;
+      padding: 0;
+
+      .call {
+        padding: 0 25px;
+
+        h2 {
+          font-size: 170%;
+          padding-bottom: 20px;
+        }
+
+        .skills {
+          margin-right: 0;
+
+          span.title {
+            font-size: 100%;
+            display: block;
+            width: 140px;
+            margin: -35px auto 0 auto;
+            text-align: center;
+            background: $navysuit;
+            padding: 0 10px;
+          }
+
+          p {
+            font-size: 115%;
+            line-height: 1.3;
+          }
+
+          em {
+            display: block;
+            font-size: 120%;
+            padding-top: 18px;
+
+            &:first-of-type {
+              margin-top: -10px;
+              padding-top: 0;
+            }
+          }
+        }//.skills
+      }//.call
+    }//.action
+  }//#approach
+}//@media small
 
 #work {
   .portfolio-wrap {
@@ -169,6 +233,7 @@ body {
         display: block;
         background: lighten($navysuit,5%);
         padding: 20px 28px 10px 28px;
+        min-height: 132px;
         transition: background .5s;
 
         &:hover {
@@ -187,6 +252,32 @@ body {
   }//.portfolio
 }//#work
 
+@media #{$small-only} {
+  #work {
+    .portfolio-wrap {
+      padding: 28px 15px 0 15px;
+
+      span.title {
+        font-size: 100%;
+        display: block;
+        width: 190px;
+        margin: -41px auto 0 auto;
+        text-align: center;
+        background: $navysuit;
+        padding: 0 10px;
+      }
+    }
+
+    .portfolio .piece {
+      margin-bottom: 15px;
+
+      a {
+        min-height: 0;
+      }
+    }
+  }//#work
+}//@media small
+
 #copyright {
   padding-bottom: 40px;
 
@@ -194,3 +285,10 @@ body {
     color: lighten($navysuit,20%);
   }
 }
+
+@media #{$small-only} {
+  #copyright {
+    padding-top: 12px;
+    text-align: center;
+  }//#copyright
+}//@media small
