@@ -35,4 +35,15 @@ $darkgray:    #555;
 @mixin heading { font-family: "bebas-neue", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif; }
 @mixin highlight { text-transform: uppercase; color: $highlight; }
 
+@mixin block_title { // Same line title, used mostly on smaller viewpoints
+  display: block;
+  width: 140px;
+  font-size: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  background: $navysuit;
+  padding: 0 10px;
+  margin: -35px auto 0 auto;
+}
+
 .wf-loading { visibility: hidden; } // Fix FOUT w/ Typekit
