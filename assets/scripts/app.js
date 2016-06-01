@@ -1,11 +1,10 @@
-// List of Elements to Work With
+// Resource Listing
 var resources = {
   //Presets
   breakpoint:       768,
   top_highlight:    260,
 
   //Target Elements
-  $personal_links:  $('#intro .links a'),
   $personal_links:  $('#intro .links a'),
   $work_pieces:     $('#work .portfolio-wrap .piece')
 }
@@ -51,6 +50,7 @@ var site = {
   }
 }
 
+// Fire it up
 $(document).ready(function() {
   site.boot_up();
 });
