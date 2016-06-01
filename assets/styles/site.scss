@@ -4,7 +4,7 @@
 body {
   background: $navysuit;
   color: $bodytype;
-}
+}//body
 
 
 /* Section Styles
@@ -68,6 +68,26 @@ body {
     }//.links
   }//.name
 }//#intro
+
+@include breakpoint(large only) {
+  #intro {
+    padding-top: 70px;
+
+    .photo {
+      text-align: right;
+    }//.photo
+
+    .name h4 {
+      font-size: 150%;
+    }//.name h4
+
+    .name .links {
+      .wrap {
+        display: block;
+      }//.wrap
+    }//.name.links
+  }//#intro
+}//@media large
 
 @include breakpoint(medium down) {
   #intro {
@@ -180,6 +200,46 @@ body {
     }//p
   }//.call
 }//#approach
+
+@include breakpoint(large only) {
+  #approach {
+    padding: 45px 0 40px 0;
+    max-width: 960px;
+    margin: 0 auto;
+
+    .rundown {
+      .marquee {
+        font-size: 148%;
+      }//.marquee
+    }//.rundown
+
+    .action{
+      .call {
+        h2 {
+          font-size: 190%;
+        }//h2
+
+        .skills {
+          margin: 23px 35px 0 0;
+          padding-top: 23px;
+
+          span.title {
+            font-size: 108%;
+          }//.title
+
+          p {
+            font-size: 102%;
+            line-height: 1.8;
+          }//p
+
+          em {
+            font-size: 112%;
+          }//em
+        }//.skills
+      }//.call
+    }//.action
+  }//#approach
+}//@media large
 
 @include breakpoint(medium down) {
   #approach {
@@ -335,6 +395,43 @@ body {
   }//.portfolio
 }//#work
 
+@include breakpoint(large only) {
+  #work {
+    max-width: 960px;
+    margin: 0 auto;
+
+    .portfolio-wrap {
+      margin: 0 50px;
+      padding: 28px 0 0 0;
+
+      span.title {
+        @include block_title;
+        width: 196px;
+        margin: -41px auto 25px auto;
+      }
+    }//.portfolio-wrap
+
+    .portfolio .piece {
+      margin-bottom: 30px;
+
+      a {
+        .bg {
+          height: 200px;
+        }//.bg
+
+        ul {
+          min-height: 82px;
+        }//ul
+      }//a
+
+      &:nth-child(5) a ul,
+      &:nth-child(6) a ul {
+        min-height: 0;
+      }
+    }//.piece
+  }//#work
+}//@media large
+
 @include breakpoint(medium down) {
   #work {
     padding-top: 25px;
@@ -358,8 +455,6 @@ body {
 
         .bg {
           height: 150px;
-          -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
         }//.bg
       }//a
     }//.piece
@@ -376,6 +471,16 @@ body {
     color: lighten($navysuit,20%);
   }
 }
+
+@include breakpoint(large only) {
+  #copyright {
+    padding-bottom: 50px;
+
+    p {
+      text-align: center;
+    }
+  }//#copyright
+}//@media large
 
 @include breakpoint(medium down) {
   #copyright {

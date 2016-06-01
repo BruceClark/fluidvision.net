@@ -1,5 +1,11 @@
 // List of Elements to Work With
-var elements = {
+var resources = {
+  //Presets
+  breakpoint:       768,
+  top_highlight:    260,
+
+  //Target Elements
+  $personal_links:  $('#intro .links a'),
   $personal_links:  $('#intro .links a'),
   $work_pieces:     $('#work .portfolio-wrap .piece')
 }
@@ -8,25 +14,29 @@ var elements = {
 var site = {
   boot_up: function() {
     site.responsive();
+
+    $(window).resize(function() {
+      site.responsive();
+    });
   },
 
   responsive: function() {
     site_width = $(window).width();
 
     // Change button class on #intro
-    if (site_width < 668) {
-      elements.$personal_links.removeClass('secondary');
+    if (site_width < resources.breakpoint) {
+      resources.$personal_links.removeClass('secondary');
       site.highlight_scroll();
     } else {
-      elements.$personal_links.addClass('secondary');
+      resources.$personal_links.addClass('secondary');
     }
   },
 
   highlight_scroll: function(){
-    elements.$work_pieces.each(function(index, el) {
+    resources.$work_pieces.each(function(index, el) {
       var $self = $(this);
       var $target = $(this).children('a');
-      var element_top = $self.offset().top - 260;
+      var element_top = $self.offset().top - resources.top_highlight;
 
       $(window).scroll(function(event) {
         var scrolled = $(window).scrollTop();
@@ -42,9 +52,5 @@ var site = {
 }
 
 $(document).ready(function() {
-  $(window).resize(function() {
-    site.responsive();
-  });
-
   site.boot_up();
 });

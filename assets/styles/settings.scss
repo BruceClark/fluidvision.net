@@ -1,15 +1,17 @@
-/* Foundation Setings Overrides
+/* Foundation Settings Grid & Overrides
 ---------------------------------------- */
 
 $body-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 $breakpoints: (
   small:      0,
-  medium:     321px,
-  large:      667px,
+  medium:     374px,
+  large:      768px,
   xlarge:     1200px,
   xxlarge:    1200px
 );
+
+$breakpoint-classes: (small medium large xlarge);
 
 $foundation-palette: (
   primary:    #888,
