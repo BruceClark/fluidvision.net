@@ -7,6 +7,9 @@ module.exports = function (grunt) {
 
     sass: {
       development: {
+        options: {
+          style: 'compressed'
+        },
         files: {
           'styles.css': 'assets/styles/manifest.scss'
         }
