@@ -3,6 +3,14 @@
 
 $body-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
+$breakpoints: (
+  small: 0,
+  medium: 640px,
+  large: 1200px,
+  xlarge: 1200px,
+  xxlarge: 1200px
+);
+
 $foundation-palette: (
   primary:    #888,
   secondary:  #fff,
