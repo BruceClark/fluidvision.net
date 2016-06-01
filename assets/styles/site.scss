@@ -51,11 +51,14 @@ body {
     }//h1
 
     .links {
+      font-size: 0;
+
       .wrap {
         display: none;
       }//.wrap
 
       .hollow.button {
+        margin-right: 6px;
         background-color: rgba(255,255,255,.15);
 
         &:hover,
