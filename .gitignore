@@ -14,4 +14,4 @@ scripts.js
 styles.css
 .sass-cache/
 styles.css.map
-/node_modules/
+node_modules/
