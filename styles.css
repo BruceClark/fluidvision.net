@@ -347,6 +347,16 @@ main + .section > .main {
 }
 
 
+.more {
+  margin-top: 26px;
+}
+
+.more cite {
+  color: var(--highlight);
+  font-family: var(--serif);
+}
+
+
 /* Footer
 ---------------------------------------- */
 
