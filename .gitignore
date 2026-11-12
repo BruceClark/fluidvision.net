@@ -7,10 +7,3 @@
 .Trashes
 .AppleDB
 .AppleDesktop
-
-
-# Compiled Files
-scripts.js
-.sass-cache/
-styles.css.map
-node_modules/
