@@ -1,205 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-  <title>Bruce Clark: Denver based designer, developer, and technology lover.</title>
+  <title>Bruce Clark: People-first product, design, and AI leader in Denver, Colorado.</title>
 
-  <meta name="description" content="Bruce Clark is a designer, developer, and tech adovate who lives in beautiful Denver, Colorado."/>
+  <meta name="description" content="Bruce Clark leads product, design, and AI teams from Denver, Colorado. A short snapshot of how he leads, what he is focused on, and what people-first means in the age of AI."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Bruce Clark"/>
+  <meta property="og:description" content="People-first product, design, and AI leader in Denver, Colorado."/>
 
   <!-- Styles -->
-  <link rel="stylesheet" type="text/css" media="screen" href="/styles.css"/>
+  <link rel="preload" href="/assets/fonts/bebas-neue.woff2" as="font" type="font/woff2" crossorigin/>
+  <link rel="stylesheet" type="text/css" href="/styles.css"/>
 
   <!-- Icons -->
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
   <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
 
-  <!-- Scripts -->
-  <script src="https://use.typekit.net/sle5fyn.js"></script>
-  <script>try{Typekit.load({ async: true });}catch(e){}</script>
-
   <!--
       Hello Code Looker!
 
-      Thanks for stopping by, this site is hand made on top of
-      Foundation v6 using: static HTML, Sass, and Grunt.
+      Thanks for stopping by. This site is plain static HTML and
+      CSS: one stylesheet, a CSS grid, no framework, no build
+      step, and no JavaScript.
 
-      You're welcome to view and critique my style files:
+      You're welcome to view and critique the styles:
 
-        /assets/styles/settings.scss
-        /assets/styles/manifest.scss
-        /assets/styles/site.scss
-
-      Head over to my Github (github.com/bruceclark) if
-      you'd like to see more of my code.
+        /styles.css
 
       Fun fact: I made my first website in 8th grade (1999)
       hand coded with old skool' ALL CAPS HTML and hosted on
       Angelfire free web hosting. :-)
   -->
 </head>
-<body class="home">
+<body>
 
-<section id="intro">
-  <div class="row">
+<header class="hero">
+  <div class="grid">
 
-    <div class="xlarge-7 large-7 small-12 column name">
-      <h4>Hi there, my name is</h4>
+    <div class="rail hero-photo">
+      <!-- Photo slot: replace /images/bruce.jpg with any portrait. It is cropped to 4:5 automatically. -->
+      <img src="/images/bruce.jpg" alt="Bruce Clark" width="560" height="700"/>
+    </div><!-- / .hero-photo -->
+
+    <div class="main hero-name">
+      <p class="greeting">Hi there, my name is</p>
       <h1>Bruce Clark</h1>
+      <p class="tagline">and I lead product, design, and AI teams.</p>
 
-      <nav class="links">
-        <a class="secondary hollow button" href="http://twitter.com/bruce">
-          <i class="icon-twitter"></i> @bruce
-        </a><a class="secondary hollow button" href="http://linkedin.com/in/sbruceclark">
-          <i class="icon-linkedin"></i> LinkedIn
-        </a><a class="secondary hollow button" href="http://github.com/bruceclark">
-          <i class="icon-github"></i> Github
-        </a><span class="wrap"></span><a class="secondary hollow button" href="https://dribbble.com/bruceclark">
-          <i class="icon-dribbble"></i> Dribbble
-        </a><a class="secondary hollow button" href="mailto:bruce@fluidvision.net">
-          <i class="icon-mail"></i> Email
+      <nav class="links" aria-label="Elsewhere">
+        <a class="button" href="https://www.linkedin.com/in/sbruceclark">
+          <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false"><path d="M5 3.4a2.3 2.3 0 1 1 0 4.6 2.3 2.3 0 0 1 0-4.6zM3 9.8h4V21H3zM9.6 9.8h3.8v1.6c.6-1.1 2-1.9 3.8-1.9 3.3 0 4.3 2.1 4.3 5.3V21h-4v-5.5c0-1.5-.4-2.6-1.8-2.6-1.6 0-2.1 1.1-2.1 2.6V21h-4z"/></svg>
+          LinkedIn
         </a>
       </nav><!-- / .links -->
-    </div><!-- / .name -->
+    </div><!-- / .hero-name -->
 
-    <div class="xlarge-offset-2 xlarge-3 large-5 small-offset-0 small-12 column photo">
-      <img src="/images/bruce.jpg" alt="Bruce Clark" class="rounded"/>
-    </div><!-- / .photo -->
+  </div><!-- / .grid -->
+</header><!-- / .hero -->
 
-  </div><!-- / .row -->
-</section><!-- / #intro -->
+<main>
 
-<section id="approach">
-  <div class="row">
+  <section class="section grid" aria-labelledby="leadership">
+    <h2 class="rail label" id="leadership">Leadership</h2>
 
-    <div class="xlarge-7 large-7 small-12 column action">
-      <div class="call">
-        <h2>
-          I <strong>think</strong> through hard problems.<br>
-          I <strong>design</strong> and <strong>revise</strong> ideas.<br>
-          I <strong>build</strong> and <strong>iterate</strong> solutions.<br>
-          And, I <strong>enjoy</strong> the journey.
-        </h2>
+    <div class="main">
+      <p class="statement">
+        <span>I <strong>build</strong> and <strong>empower</strong> talented teams.</span>
+        <span>I <strong>rethink</strong> how products get made.</span>
+        <span>I <strong>measure</strong> what matters and <strong>say</strong> it plainly.</span>
+        <span>And, I still <strong>enjoy</strong> the journey.</span>
+      </p>
 
-        <div class="skills">
-          <p>
-            <span class="title">Hard Skills</span><br/>
-            <em>Strategy</em> (User Discovery / Wireframes / Roadmap)<br/>
-            <em>Design</em> (Photoshop / Illustrator / In&nbsp;Browser)<br/>
-            <em>HTML</em> (Bootstrap / Foundation)<br/>
-            <em>CSS</em> (LESS / Sass)<br/>
-            <em>JavaScript</em> (jQuery)<br/>
-            <em>Back-end</em> (PHP / Rails / .NET / Wordpress / Umbraco)<br/>
-            <em>Processes</em> (Agile Method / Git Workflow)
-          </p>
-        </div><!-- / .bio -->
-      </div><!-- / .call -->
-    </div><!-- / .action -->
+      <div class="prose">
+        <p>
+          I started out designing and building for the web. These days I lead
+          product management, design, research, and AI teams, and I&rsquo;ve
+          helped companies through zero-to-one, through scale, and through
+          multiple acquisitions.
+        </p>
+        <p>
+          I strive to be a people-first leader. I have always believed that
+          talented, empowered teams create more upside than any other lever
+          in business, and that the job is to keep the system of people and
+          work in balance: enough people to stay focused, few enough to
+          stay&nbsp;fast.
+        </p>
+      </div><!-- / .prose -->
+    </div><!-- / .main -->
+  </section><!-- / leadership -->
 
-    <div class="xlarge-4 xlarge-offset-1 large-5 rundown">
-      <span class="title">Intangibles</span>
+  <section class="section grid" aria-labelledby="focus">
+    <h2 class="rail label" id="focus">Current focus</h2>
 
-      <div class="marquee">
-        <span>Problem Solver</span>
-        <span>Designer</span>
-        <span>Developer</span>
-        <span>Communicator</span>
-        <span>Self Driver</span>
-        <span>Usability Champion</span>
-        <span>Respecter of Ideas</span>
-        <span>Run Through Walls Leader</span>
-        <span>Menswear Enthusiast</span>
-        <span>Scotch Connoisseur</span>
-        <span>Chess Player</span>
-        <span>Loyal Friend</span>
-        <span>Head Over Heels Husband</span>
-      </div><!-- / .marquee -->
-    </div><!-- / .rundown -->
+    <div class="main">
+      <dl class="focus">
+        <div>
+          <dt>People-first AI</dt>
+          <dd>Building AI-driven product systems that are explainable, measurable, and scalable, with the people who use and build them at the center.</dd>
+        </div>
+        <div>
+          <dt>How teams build</dt>
+          <dd>Spec-driven development, agent-assisted delivery, and what a team should look like once each person can do far more.</dd>
+        </div>
+        <div>
+          <dt>Design &amp; research</dt>
+          <dd>Human-centered design, user research, and validation deciding what gets built.</dd>
+        </div>
+        <div>
+          <dt>Measured outcomes</dt>
+          <dd>Connecting team capacity, delivery, and customer satisfaction to revenue and margin, so the work can be judged honestly.</dd>
+        </div>
+      </dl><!-- / .focus -->
+    </div><!-- / .main -->
+  </section><!-- / focus -->
 
-  </div><!-- / .row -->
-</section><!-- / #approach -->
+  <section class="section grid" aria-labelledby="people">
+    <h2 class="rail label" id="people">People first <em>in the</em> age <em>of</em> AI</h2>
 
-<section id="work">
-  <div class="row">
+    <div class="main">
+      <p class="lead">
+        AI is changing how teams work faster than most people can absorb.
+        I have never felt more empowered by a technology, and I take seriously
+        that plenty of people feel the opposite. Leading people through it
+        means holding three things in balance.
+      </p>
 
-    <div class="xlarge-10 xlarge-offset-1 portfolio-wrap">
-      <span class="title">Examples <em>of</em> Work</span>
+      <div class="pillars">
+        <div class="pillar">
+          <h3>Pace</h3>
+          <p>The change may simply be happening too fast. People deserve time to learn, to grieve a little for how the work used to be, and to adjust.</p>
+        </div>
+        <div class="pillar">
+          <h3>Agency</h3>
+          <p>Most of us aren&rsquo;t wired to break the system we work in, and those who are often aren&rsquo;t empowered to. A faster pace needs real room to reshape the work.</p>
+        </div>
+        <div class="pillar">
+          <h3>Self</h3>
+          <p>We gravitate toward what we&rsquo;re good at, and it becomes part of who we are. When the work changes, identity and self-worth change with it, and they deserve care.</p>
+        </div>
+      </div><!-- / .pillars -->
 
-      <div class="expanded row portfolio">
-        <div class="piece xlarge-4 large-6 column"><a href="http://www.printfection.com">
-          <span class="bg" style="background-image: url(/images/work/printfection.jpg);background-position: 50% 50%;"></span>
-          <strong>Printfection</strong>
-          <ul class="no-bullet">
-            <li>Branding &amp; Interface Design</li>
-            <li>Marketing Site &amp; Lead Funnel</li>
-            <li>Bootstrap, LESS, JS, PHP</li>
-          </ul>
-        </a></div><!-- / .piece -->
+      <p class="aside">
+        You can&rsquo;t solve one without solving all three. So I lean on
+        candid, authentic communication about what is changing and where to
+        learn and grow, shaped for each person. Pure optimism or pure
+        pessimism will both land flat.
+      </p>
+    </div><!-- / .main -->
+  </section><!-- / people -->
 
-        <div class="piece xlarge-4 large-6 column"><a href="http://hellotonic.com">
-          <span class="bg" style="background-image: url(/images/work/tonic.jpg);background-position: 50% 50%;"></span>
-          <strong>Tonic</strong>
-          <ul class="no-bullet">
-            <li>Design &amp; UI</li>
-            <li>Responsive Build</li>
-            <li>Bootstrap, Sass</li>
-          </ul>
-        </a></div><!-- / .piece -->
+</main>
 
-        <div class="piece xlarge-4 large-6 column"><a href="http://www.coloradoskiandgolf.com">
-          <span class="bg" style="background-image: url(/images/work/ski-golf.jpg);background-position: 50% 50%;"></span>
-          <strong>Colorado Ski &amp; Golf</strong>
-          <ul class="no-bullet">
-            <li>Development Strategy</li>
-            <li>Responsive Build</li>
-            <li>Bootstrap, Sass, JS</li>
-          </ul>
-        </a></div><!-- / .piece -->
+<footer class="section grid">
+  <p class="rail label">Denver, Colorado</p>
 
-        <div class="piece xlarge-4 large-6 column"><a href="http://wilburpacking.com">
-          <span class="bg" style="background-image: url(/images/work/wilbur.jpg);background-position: 50% 50%;"></span>
-          <strong>Wilbur Packing</strong>
-          <ul class="no-bullet">
-            <li>Design &amp; UI</li>
-            <li>Bootstrap, Sass, JS</li>
-          </ul>
-        </a></div><!-- / .piece -->
+  <div class="main">
+    <p class="personal">
+      Away from work I&rsquo;m a husband, a longtime menswear enthusiast, and
+      the maker of handmade leather duffle bags at Clark&nbsp;&amp;&nbsp;Co.
+    </p>
+    <p class="contact">
+      The best place to reach me is <a href="https://www.linkedin.com/in/sbruceclark">LinkedIn</a>.
+    </p>
+    <p class="copyright">&copy; Stephen Bruce Clark, Jr.</p>
+  </div><!-- / .main -->
+</footer>
 
-        <div class="piece xlarge-4 large-6 column"><a href="http://itunes.apple.com/us/app/denver-ride/id346508530?mt=8">
-          <span class="bg" style="background-image: url(/images/work/denver-ride.jpg);background-position:50% 50%;"></span>
-          <strong>Denver Ride</strong>
-          <ul class="no-bullet">
-            <li>Side Project: iOS App </li>
-            <li>iOS Interface Design</li>
-          </ul>
-        </a></div><!-- / .piece -->
-
-        <div class="piece xlarge-4 large-6 column"><a href="http://fluidvision.net/writing/grammar.php">
-          <span class="bg" style="background-image: url(/images/work/writing.jpg);background-position: 50% 50%;"></span>
-          <strong>Take Your Grammar Seriously</strong>
-          <ul class="no-bullet">
-            <li>Writing</li>
-            <li>Blog Post</li>
-          </ul>
-        </a></div><!-- / .piece -->
-      </div><!-- / .portfolio -->
-    </div><!-- / .portfolio-wrap -->
-
-  </div><!-- / .row -->
-</section><!-- / #work -->
-
-<section id="copyright">
-  <div class="row">
-    <div class="xlarge-10 xlarge-offset-1">
-      <p>&copy; Stephen Bruce Clark, Jr.</p>
-    </div>
-  </div><!-- / .row -->
-</section><!-- / #copyright -->
-
-<!-- Scripts -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="/scripts.js"></script>
 </body>
 </html>

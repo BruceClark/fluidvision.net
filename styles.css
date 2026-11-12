@@ -1,0 +1,575 @@
+/* fluidvision.net
+   Plain CSS. No framework, no build step.
+---------------------------------------- */
+
+/* Bebas Neue, Copyright 2010 The Bebas Neue Project Authors
+   (https://github.com/dharmatype/Bebas-Neue), licensed under the
+   SIL Open Font License 1.1 (https://openfontlicense.org). */
+@font-face {
+  font-family: "Bebas Neue";
+  src: url(/assets/fonts/bebas-neue.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* Colors & Type
+---------------------------------------- */
+
+:root {
+  --navysuit:      #24323b;
+  --navysuit-deep: #1a252b;
+  --bodytype:      #c8cdd0;
+  --subtlegray:    #748893;
+  --darktype:      #284859;
+  --highlight:     #ededed;
+  --darkgray:      #555;
+  --anchor:        #8fb5d8;
+  --anchor-hover:  #b7d4ef;
+
+  --sans:    "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --serif:   Georgia, serif;
+  --heading: "Bebas Neue", "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+
+  --gutter: 32px;
+}
+
+
+/* Base
+---------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--navysuit);
+  color: var(--bodytype);
+  font: 400 18px/1.65 var(--sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--anchor);
+  color: var(--navysuit);
+}
+
+h1,
+h2,
+h3,
+p,
+dl,
+dd {
+  margin: 0;
+}
+
+a {
+  color: var(--anchor);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  transition: color .2s;
+}
+
+a:hover,
+a:focus {
+  color: var(--anchor-hover);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--anchor);
+  outline-offset: 3px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* Grid
+   Twelve columns: a four column rail on the
+   left, an eight column main on the right.
+---------------------------------------- */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gutter);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.rail {
+  grid-column: 1 / span 4;
+}
+
+.main {
+  grid-column: 5 / span 8;
+}
+
+
+/* Hero
+---------------------------------------- */
+
+.hero {
+  /* The photo runs from pale sky to dark water. The gradient pins the dark
+     band to the bottom so the light tagline and button always sit on it. */
+  background:
+    linear-gradient(to top, rgba(26, 37, 43, .8) 0, rgba(26, 37, 43, .62) 150px, rgba(26, 37, 43, 0) 245px),
+    #fefefe url(/images/backgrounds/hero.jpg) no-repeat 50% 50%;
+  background-size: auto, cover;
+  border-bottom: 5px solid var(--navysuit-deep);
+  padding: 92px 0 80px;
+  color: var(--darktype);
+}
+
+.hero .grid {
+  align-items: center;
+}
+
+.hero-photo {
+  justify-self: end;
+  width: min(100%, 250px);
+}
+
+.hero-photo img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 50% 20%;
+  border: 2px solid #fff;
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, .25);
+}
+
+.hero-name {
+  padding-left: 24px;
+}
+
+.greeting {
+  font: italic 400 26px/1.3 var(--serif);
+  color: var(--darkgray);
+}
+
+.hero h1 {
+  margin: 10px 0 2px -3px;
+  font: 400 clamp(84px, 10.5vw, 136px)/.9 var(--heading);
+  letter-spacing: .005em;
+  text-transform: uppercase;
+}
+
+.tagline {
+  margin-top: 30px;
+  color: #fff;
+  font: italic 400 26px/1.3 var(--serif);
+}
+
+.links {
+  margin-top: 24px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: .62em 1.05em .6em .95em;
+  border: 1px solid #fff;
+  background: rgba(255, 255, 255, .15);
+  color: #fff;
+  font-size: 15px;
+  line-height: 1;
+  letter-spacing: .08em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background .2s, color .2s;
+}
+
+.button svg {
+  fill: currentColor;
+  margin-top: -2px;
+}
+
+.button:hover,
+.button:focus {
+  background: #fff;
+  color: var(--darktype);
+}
+
+.button:focus-visible {
+  outline-color: #fff;
+}
+
+
+/* Sections
+---------------------------------------- */
+
+.section > .rail,
+.section > .main {
+  padding-top: 58px;
+  padding-bottom: 66px;
+}
+
+.section > .main {
+  padding-left: 24px;
+}
+
+.section + .section > .main,
+main + .section > .main {
+  border-top: 1px solid var(--subtlegray);
+}
+
+.label {
+  color: var(--subtlegray);
+  text-align: right;
+  font-size: 28px;
+  font-weight: 200;
+  line-height: 1.3;
+  text-wrap: balance;
+}
+
+.label em {
+  font-family: var(--serif);
+  font-size: 92%;
+}
+
+
+/* Leadership
+---------------------------------------- */
+
+.statement {
+  font-size: clamp(27px, 3vw, 34px);
+  font-weight: 300;
+  line-height: 1.34;
+}
+
+.statement span {
+  display: block;
+  text-wrap: balance;
+}
+
+.statement strong {
+  color: var(--highlight);
+  font-weight: 700;
+}
+
+.prose {
+  max-width: 660px;
+  margin-top: 30px;
+}
+
+.prose p + p {
+  margin-top: 1em;
+}
+
+
+/* Current Focus
+---------------------------------------- */
+
+.focus > div {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  column-gap: var(--gutter);
+  align-items: baseline;
+  padding: 19px 0 20px;
+  border-top: 1px solid rgba(116, 136, 147, .32);
+}
+
+.focus > div:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.focus > div:last-child {
+  padding-bottom: 0;
+}
+
+.focus dt {
+  grid-column: span 3;
+  color: var(--highlight);
+  font: italic 400 23px/1.4 var(--serif);
+}
+
+.focus dd {
+  grid-column: span 5;
+}
+
+
+/* People First
+---------------------------------------- */
+
+.lead {
+  max-width: 700px;
+  font-size: 23px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: var(--gutter);
+  margin: 46px 0 44px;
+}
+
+.pillar {
+  padding-top: 22px;
+  border-top: 1px solid rgba(116, 136, 147, .32);
+}
+
+.pillar h3 {
+  color: var(--highlight);
+  font: 400 64px/.95 var(--heading);
+  letter-spacing: .01em;
+  text-transform: uppercase;
+}
+
+.pillar p {
+  margin-top: 8px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.aside {
+  max-width: 660px;
+  color: var(--highlight);
+  font: italic 400 22px/1.55 var(--serif);
+}
+
+
+/* Footer
+---------------------------------------- */
+
+footer.section > .rail,
+footer.section > .main {
+  padding-bottom: 76px;
+}
+
+.personal {
+  max-width: 660px;
+}
+
+.contact {
+  margin-top: .5em;
+}
+
+.copyright {
+  margin-top: 40px;
+  color: var(--subtlegray);
+  font-size: 14px;
+  letter-spacing: .04em;
+}
+
+
+/* Large: tablets and small laptops
+---------------------------------------- */
+
+@media (max-width: 1023px) {
+  :root {
+    --gutter: 24px;
+  }
+
+  .grid {
+    padding: 0 32px;
+  }
+
+  .hero {
+    padding: 70px 0 66px;
+  }
+
+  .hero-name,
+  .section > .main {
+    padding-left: 8px;
+  }
+
+  .greeting,
+  .tagline {
+    font-size: 23px;
+  }
+
+  .label {
+    font-size: 24px;
+  }
+
+  .focus dt,
+  .focus dd {
+    grid-column: 1 / -1;
+  }
+
+  .focus dd {
+    margin-top: 2px;
+  }
+
+  .pillars {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 26px;
+  }
+
+  .pillar {
+    display: grid;
+    grid-template-columns: 150px minmax(0, 1fr);
+    column-gap: var(--gutter);
+    align-items: start;
+  }
+
+  .pillar h3 {
+    font-size: 52px;
+  }
+
+  .pillar p {
+    margin-top: 2px;
+  }
+}
+
+
+/* Small: phones
+---------------------------------------- */
+
+@media (max-width: 767px) {
+  body {
+    font-size: 17px;
+  }
+
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 0 24px;
+  }
+
+  .rail,
+  .main {
+    grid-column: 1;
+  }
+
+  .hero {
+    /* Show only the pale top of the photo, with a shorter dark band. */
+    background-image:
+      linear-gradient(to top, rgba(26, 37, 43, .96) 0, rgba(26, 37, 43, .88) 120px, rgba(26, 37, 43, 0) 195px),
+      url(/images/backgrounds/hero.jpg);
+    background-position: 0 0, 50% 0;
+    background-size: auto, auto 210%;
+    padding: 38px 0 50px;
+    text-align: center;
+  }
+
+  .hero-photo {
+    justify-self: center;
+    width: 128px;
+    margin-bottom: 24px;
+  }
+
+  .hero-photo img {
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, .25);
+  }
+
+  .hero-name,
+  .section > .main {
+    padding-left: 0;
+  }
+
+  .greeting,
+  .tagline {
+    font-size: 20px;
+  }
+
+  .tagline {
+    margin-top: 36px;
+  }
+
+  .hero h1 {
+    margin-left: 0;
+    font-size: clamp(64px, 21vw, 92px);
+  }
+
+  .links {
+    margin-top: 20px;
+  }
+
+  .section > .rail {
+    padding-top: 38px;
+    padding-bottom: 14px;
+  }
+
+  .section > .main {
+    padding-top: 0;
+    padding-bottom: 42px;
+  }
+
+  .section + .section > .main,
+  main + .section > .main {
+    border-top: 0;
+  }
+
+  .section + .section > .rail,
+  main + .section > .rail {
+    border-top: 1px solid var(--subtlegray);
+  }
+
+  .label {
+    font-size: 21px;
+    font-weight: 300;
+    text-align: left;
+  }
+
+  .statement {
+    font-size: clamp(21px, 6.2vw, 27px);
+    line-height: 1.28;
+  }
+
+  .statement span + span {
+    margin-top: .38em;
+  }
+
+  .prose {
+    margin-top: 22px;
+  }
+
+  .focus dt {
+    font-size: 21px;
+  }
+
+  .lead {
+    font-size: 20px;
+  }
+
+  .pillars {
+    margin: 34px 0 32px;
+  }
+
+  .pillar {
+    display: block;
+  }
+
+  .pillar h3 {
+    font-size: 48px;
+  }
+
+  .pillar p {
+    margin-top: 6px;
+  }
+
+  .aside {
+    font-size: 20px;
+  }
+
+  footer.section > .rail {
+    padding-bottom: 14px;
+  }
+
+  footer.section > .main {
+    padding-bottom: 56px;
+  }
+
+  .copyright {
+    margin-top: 30px;
+  }
+}
