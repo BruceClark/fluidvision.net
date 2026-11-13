@@ -462,12 +462,18 @@ footer.section > .main {
   }
 
   .hero {
-    /* Show only the pale top of the photo, with a shorter dark band. */
+    /* The photo fills the lower part of the tall phone hero so its horizon
+       falls between the name and the tagline: pale sky behind the name, the
+       headland and dark water behind the tagline and button. Its top edge
+       fades into the white background, which continues the pale sky above
+       it. A light band underneath
+       keeps the tagline and button readable. */
     background-image:
-      linear-gradient(to top, rgba(26, 37, 43, .96) 0, rgba(26, 37, 43, .88) 120px, rgba(26, 37, 43, 0) 195px),
+      linear-gradient(to top, rgba(26, 37, 43, .5) 0, rgba(26, 37, 43, .3) 110px, rgba(26, 37, 43, 0) 190px),
+      linear-gradient(to bottom, #fefefe 38%, rgba(254, 254, 254, 0) 54%),
       url(/images/backgrounds/hero.jpg);
-    background-position: 0 0, 50% 0;
-    background-size: auto, auto 210%;
+    background-position: 0 0, 0 0, 74% 100%;
+    background-size: auto, auto, auto 62%;
     padding: 38px 0 50px;
     text-align: center;
   }
@@ -498,7 +504,7 @@ footer.section > .main {
 
   .hero h1 {
     margin-left: 0;
-    font-size: clamp(64px, 21vw, 92px);
+    font-size: clamp(52px, calc((100vw - 48px) / 4.4), 92px);
   }
 
   .links {
